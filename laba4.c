@@ -8,7 +8,6 @@ char* InsertSpace(char * i)
     int k = 0;
     char static res[512];
     char * a = res;
-
     while (*i != '\0')
     {
         if (IsAlpha(*i))

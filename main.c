@@ -9,5 +9,4 @@ int main()
 	char *a = str1;
 	char* str2 = InsertSpace(a);
 	StringOut(str2);
-
 }
