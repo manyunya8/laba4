@@ -7,6 +7,7 @@ int main()
 	printf("Enter the string: ");
 	fgets(str1, 255, stdin);
 	char *a = str1;
-	char* str2 = InsertSpace(a);
-	StringOut(str2);
+	char* str2 = insertSpace(a);
+	printf(str2);
+	return 0;
 }

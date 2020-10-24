@@ -1,16 +1,16 @@
-int IsAlpha(char a)
+int isAlpha(char a)
 {
     return (a >= 'A' && a <= 'Z' || a >= 'a' && a <= 'z');
 }
 
-char* InsertSpace(char * i)
+char* insertSpace(char* i)
 {
     int k = 0;
     char static res[512];
     char * a = res;
     while (*i != '\0')
     {
-        if (IsAlpha(*i))
+        if (isAlpha(*i))
         {
             k++;
             *a = *i;
@@ -32,13 +32,4 @@ char* InsertSpace(char * i)
         i++;
     }
     return res;
-}
-
-void StringOut(char* a)
-{
-    while (*a != 0)
-    {
-        putchar(*a);
-        a++;
-    }
 }
