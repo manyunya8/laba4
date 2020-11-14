@@ -3,9 +3,9 @@
 
 int main()
 {
-	char str1[256];
+	char str1[SIZE];
 	printf("Enter the string: ");
-	fgets(str1, 255, stdin);
+	fgets(str1, SIZE, stdin);
 	char *a = str1;
 	char* str2 = insertSpace(a);
 	printf(str2);

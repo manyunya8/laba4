@@ -1,3 +1,5 @@
+#define SIZE 250
+
 int isAlpha(char a)
 {
     return (a >= 'A' && a <= 'Z' || a >= 'a' && a <= 'z');
@@ -6,7 +8,7 @@ int isAlpha(char a)
 char* insertSpace(char* i)
 {
     int k = 0;
-    char static res[512];
+    char static res[2 * SIZE];
     char * a = res;
     while (*i != '\0')
     {
