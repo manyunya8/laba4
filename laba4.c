@@ -1,37 +1,31 @@
-#define SIZE 250
-
 int isAlpha(char a)
 {
     return (a >= 'A' && a <= 'Z' || a >= 'a' && a <= 'z');
 }
 
-char* insertSpace(char* i)
+int insertSpace(char* i)
 {
     int k = 0;
-    char static res[2 * SIZE];
-    char * a = res;
     while (*i != '\0')
     {
         if (isAlpha(*i))
         {
             k++;
-            *a = *i;
-            a++;
+            printf("%c", *i);
         }
         else
         {
             for (k; k > 0; k--)
             {
-                *a = ' ';
-                a++;
+                printf(" ");
             }
             if (*i != ' ')
             {
-                *a = *i;
-                a++;
+                printf("%c",*i);
             }
         }
         i++;
     }
-    return res;
+    printf("\n");
+    return 0;
 }
