@@ -3,29 +3,36 @@ int isAlpha(char a)
     return (a >= 'A' && a <= 'Z' || a >= 'a' && a <= 'z');
 }
 
-int insertSpace(char* i)
+int insertSpace(char* a, char* b)
 {
     int k = 0;
-    while (*i != '\0')
+    int count = 0;
+    while (*a != '\0')
     {
-        if (isAlpha(*i))
+        if (isAlpha(*a))
         {
             k++;
-            printf("%c", *i);
+            *b = *a;
+            b++;
+            count++;
         }
         else
         {
             for (k; k > 0; k--)
             {
-                printf(" ");
+                *b = ' ';
+                b++;
+                count++;
             }
-            if (*i != ' ')
+            if (*a != ' ')
             {
-                printf("%c",*i);
+                *b = *a;
+                b++;
+                count++;
             }
         }
-        i++;
+        a++;
     }
-    printf("\n");
-    return 0;
+    *b = 0;
+    return count;
 }

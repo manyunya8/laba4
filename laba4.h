@@ -1,4 +1,4 @@
 #pragma once
 
 int isAlpha(char a);
-int insertSpace(char* i);
+int insertSpace(char* a, char* b);

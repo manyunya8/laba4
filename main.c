@@ -5,10 +5,13 @@
 int main()
 {
 	char str[SIZE];
-	printf("Enter the string: ");
+	char res[SIZE * 2];
+	char* s = str;
+	char* r = res;
+	printf("Enter the string:\n");
 	fgets(str, SIZE, stdin);
-	char *a = str;
 	printf("Result:\n");
-	insertSpace(a);
+	insertSpace(s,r);
+	printf("%s", res);
 	return 0;
 }
